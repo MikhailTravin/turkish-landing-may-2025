@@ -1,0 +1,87 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	padding: 45px 0px;
+	@media (max-width: $mobile) {
+		padding: 12px 0px 10px 0px;
+	}
+	// .header__content
+	&__content {
+		position: relative;
+	}
+	// .header__container
+	&__container {
+		padding: 0px 10px;
+		max-width: 1445px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .header__logo
+	&__logo {
+		position: relative;
+		img {
+			height: 66px;
+		}
+		@media (max-width: $mobile) {
+			img {
+				height: 57px;
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: -18px;
+			left: -11px;
+			width: 236px;
+			height: 72px;
+			z-index: -1;
+			filter: blur(40px);
+			background: #dde3e4;
+		}
+	}
+	// .header__whatsapp
+	&__whatsapp {
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin: -45px -25px 0px 0px;
+		@media (max-width: 1650px) {
+			margin: 0px 0px 0px 0px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: -10px;
+			left: -21px;
+			width: calc(100% + 42px);
+			height: calc(100% + 20px);
+			z-index: -1;
+			background: linear-gradient(180deg, #1b3765 0%, #1b3765 100%);
+			filter: blur(20px);
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	// .header__icon
+	&__icon {
+		width: 32px;
+		height: 32px;
+		display: block;
+		margin: 0px 10px 0px 0px;
+		background: url("../img/icons/whatsapp.svg") 0 0 no-repeat;
+	}
+	// .header__tel
+	&__tel {
+		font-family: "Calibri";
+		font-weight: 700;
+		font-size: 16px;
+		line-height: math.div(26, 16);
+		letter-spacing: 0.08px;
+		color: #fff;
+	}
+}
